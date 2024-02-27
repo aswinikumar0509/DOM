@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // run this function while the docunment is loading
+
+    window.onload=()=>{
+
+        //  create a couple of element inan otherwise empty html page
+        const heading = document.createElement("h1")
+        const headingText = document.createTextNode("Big Head!")
+        heading.appendChild(headingText)
+        document.body.appendChild(heading)
+    };
+
+</script>
+<body onload="console.log('Welcome to my Home Page');">
+    
+</body>
+</html>

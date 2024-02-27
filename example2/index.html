@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+    function change(){
+          // document.getElementsByTagName("h2") returns a NodeList of the <h2>
+          // elements in the document, and the first is number 0:
+        const header = document.getElementsByTagName("h2").item(0);
+
+        //  The firstChild of the header is a Text node
+        header.firstChild.data = "A Dynamic Docunment";
+
+        // Access teh first paragraph
+        const para = document.getElementsByTagName("p").item(0);
+        para.firstChild.data = "This is the first Paragraph.";
+
+        // Creating the new text for the second paragraph
+
+        const newText = document.createTextNode("This is the second paragrapd")
+
+        //  Creating the new element for teh second paragraph
+        const newElement = document.createElement("p");
+
+        // Put the text in the paragraph
+        newElement.appendChild(newText);
+
+        // Puting the paragraph in the end of the docunment by appending it to the body
+
+        para.parentNode.appendChild(newElement);
+
+    }
+</script>
+<body>
+    <input type="button" value="Change this document." onclick="change()"/>
+    <h2>Header</h2>
+    <p>Paragraph</p>
+</body>
+</html>

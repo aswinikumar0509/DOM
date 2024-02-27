@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    function generateTable() {
+        // Create a <table> element and a <tbody> element
+        const tb1 = document.createElement("table");
+        const tb1Body = document.createElement("tbody");
+
+        // creating all the cells
+
+        for(let i=0;i<2;i++){
+            const row = document.createElement("tr");
+
+            for(let j=0;j<2;j++){
+                const cell = document.createElement("td");
+                const cellText = document.createTextNode(`cell in row${i},column${j}`);
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+            }
+
+            tblBody.appendChild(row);
+        }
+
+        tb1.appendChild(tb1Body);
+
+        document.body.appendChild(tbl);
+
+        tbl.setAttribute("border","2");
+
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+        tbl.appendChild(tblBody);
+        document.body.appendChild(tbl);
+
+
+
+    }
+</script>
+<body>
+
+    <input type="button" value="Generate a Table" onclick="generateTable()"/>
+
+    <table border="2">
+        <tbody>
+            <tr>
+                <td>cell in row 0 column 0</td>
+                <td>cell in row 0 column 1</td>
+            </tr>
+            <tr>
+                <td>cell in row 1 column 0</td>
+                <td>cell in row 1 column 1</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
